@@ -1,5 +1,6 @@
-	 var noAceptado=" No aceptado";
-	 var aceptado=1;
+function lexer(){
+	var noAceptado=" No aceptado";
+	 var aceptado=" aceptado";
 	 var validadorDe0_6 = new RegExp("[a-o]|[q-z]|[A-O]|[Q-Z]");//letra-p
 	 var validadorDe0_4 = new RegExp("[1-9]");
 	 var validadorDe4_4 = new RegExp("[0-9]");
@@ -11,10 +12,11 @@
 	 var validadorDe10_6 = new RegExp("[a-m]|[o-z]|[A-M]|O-Z]");//letra-n
 	 var validadorDe11_6 = new RegExp("[a-s]|[u-z]|[A-S]|[U-Z]");//letra-t
 	 var validarP = new RegExp("p|P"); 
+	 var resultado=[null];
 
 	 var contador=0;
 	 var i=0;
-	 var cadena=("prin; prina0 p0 = =q -q q- a+ +a 111a + - / pa1 print 111+ praa*");
+	 var cadena=document.getElementById("valor").value;;
 	 var separador = " "; // un espacio en blanco
 	 var palabras = cadena.split(separador);
 
@@ -30,10 +32,6 @@
 			else{return noAceptado;}
 
 		}
-		function estado_1(){  return aceptado;}
-		function estado_2(){return aceptado;}
-		function estado_3(){return aceptado;}
-
 		function estado_4(){
 			contador++;
 			var carater = palabras[i];
@@ -41,7 +39,6 @@
 			if (validadorDe4_5.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
 			else{return noAceptado;}
 		}	
-		function estado_5(){return aceptado;}
 		
 		function estado_6(){
 			contador++;
@@ -51,7 +48,6 @@
 			else{return noAceptado;}
 
 		}
-		function estado_7(){return aceptado;}
 
 		function estado_8(){
 			contador++;
@@ -88,14 +84,18 @@
 			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
 			else{return noAceptado;}
 		}
-		function estado_12(){return aceptado;}
-		function estado_13(){return aceptado;}
 
 		function main(){
 	      	for ( i = 0; i < palabras.length; i++) {
-	      			console.log(palabras[i]+": "+estado_0());
+	      		 resultado.push(palabras[i]+": "+estado_0()+"<br>");
+	      			console.log();
 	      		contador=0;
 	      	}
+	      	document.getElementById("imprimir").innerHTML= resultado.slice(0,resultado.length);
+
 	     }
 
 main();
+
+}
+
