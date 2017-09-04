@@ -23,20 +23,21 @@ function lexer(){
 
 		function estado_0(){
 			var carater = palabras[i];
-			if (carater.charAt(contador)==="+" & (contador+1)===palabras[i].length) {return aceptado;}
-			if (carater.charAt(contador)==="-" & (contador+1)===palabras[i].length) {return aceptado;}
-			if (carater.charAt(contador)==="=" & (contador+1)===palabras[i].length) {return aceptado;}
+			if (carater.charAt(contador)==="+" & (contador+1)===palabras[i].length) {return aceptado+" Sumar";}
+			if (carater.charAt(contador)==="-" & (contador+1)===palabras[i].length) {return aceptado+" Restar" ;}
+			if (carater.charAt(contador)==="=" & (contador+1)===palabras[i].length) {return aceptado+" Asignar";}
 			if (validadorDe0_4.test(carater.charAt(contador))) {return estado_4();}
 			if (validadorDe0_6.test(carater.charAt(contador))) {return estado_6();}
 			if (validarP.test(carater.charAt(contador))) {return estado_8();}
 			else{return noAceptado;}
 
 		}
+
 		function estado_4(){
 			contador++;
 			var carater = palabras[i];
 			if (validadorDe4_4.test(carater.charAt(contador))) {return estado_4();}
-			if (validadorDe4_5.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
+			if (validadorDe4_5.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado+" Entero";}
 			else{return noAceptado;}
 		}	
 		
@@ -44,7 +45,7 @@ function lexer(){
 			contador++;
 			var carater = palabras[i];
 			if (validadorDe6_6.test(carater.charAt(contador))) {return estado_6();}
-			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
+			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado+" Letra";}
 			else{return noAceptado;}
 
 		}
@@ -54,7 +55,7 @@ function lexer(){
 			var carater = palabras[i];
 			if (validadorDe8_6.test(carater.charAt(contador))) {return estado_6();}
 			if (carater.charAt(contador)==="r") {return estado_9();}
-			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
+			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado+" Letra";}
 			else{return noAceptado;}
 		}
 
@@ -63,7 +64,7 @@ function lexer(){
 			var carater = palabras[i];
 			if (validadorDe9_6.test(carater.charAt(contador))) {return estado_6();}
 			if (carater.charAt(contador)==="i") {return estado_10();}
-			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
+			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado+" Letra";}
 			else{return noAceptado;}
 		}
 
@@ -72,7 +73,7 @@ function lexer(){
 			var carater = palabras[i];
 			if (validadorDe10_6.test(carater.charAt(contador))) {return estado_6();}
 			if (carater.charAt(contador)==="n") {return estado_11();}
-			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
+			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado+" Letra";}
 			else{return noAceptado;}
 		}
 
@@ -80,8 +81,8 @@ function lexer(){
 			contador++;
 			var carater = palabras[i];
 			if (validadorDe11_6.test(carater.charAt(contador))) {return estado_6();}
-			if (carater.charAt(contador)==="t" & (contador+1)===palabras[i].length) {return aceptado;}
-			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado;}
+			if (carater.charAt(contador)==="t" & (contador+1)===palabras[i].length) {return aceptado+" Imprimir";}
+			if (validadorDe6_7.test(carater.charAt(contador)) & (contador+1)===palabras[i].length) {return aceptado+" Letra";}
 			else{return noAceptado;}
 		}
 
