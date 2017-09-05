@@ -93,19 +93,19 @@
     <script>
   // Arreglo de nodos
   var n = [
-    {id: 1, label: 'Nodo 1'},
-    {id: 2, label: 'Nodo 2'},
-    {id: 3, label: 'Nodo 3'},
+    {id: 1, label: 'Nodo 1', color:'Red'},
+    {id: 2, label: 'Nodo 2', color:'Red'},
+    {id: 3, label: 'Nodo 3', color:'Red'},
     {id: 4, label: 'Nodo 4'},
-    {id: 5, label: 'Nodo 5'},
+    {id: 5, label: 'Nodo 5', color:'Red'},
     {id: 6, label: 'Nodo 6'},
-    {id: 7, label: 'Nodo 7'},
+    {id: 7, label: 'Nodo 7', color:'Red'},
     {id: 8, label: 'Nodo 8'},
     {id: 9, label: 'Nodo 9'},
     {id: 10, label: 'Nodo 10'},
     {id: 11, label: 'Nodo 11'},
-    {id: 12, label: 'Nodo 12'},
-    {id: 13, label: 'Nodo 13'},
+    {id: 12, label: 'Nodo 12', color:'Red'},
+    {id: 13, label: 'Nodo 13', color:'Red'},
     {id: 0, label: 'Nodo 0'},
     
   ];
@@ -118,7 +118,7 @@
     {from: 0, to: 4, arrows:'to', label:"1-9"},
     {from: 0, to: 6, arrows:'to', label:"Letra-p"},
     {from: 0, to: 8, arrows:'to', label:"p"},
-    {from: 4, to: 4, arrows:'to', label:"Letra"},
+    {from: 4, to: 4, arrows:'to', label:"0-9"},
     {from: 4, to: 5, arrows:'to', label:"Otro"},
     {from: 6, to: 6, arrows:'to', label:"Letra"},
     {from: 6, to: 7, arrows:'to', label:"Otro"},
@@ -166,6 +166,8 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/logica.js"></script>
 
   </body>
 
