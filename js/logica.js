@@ -89,7 +89,7 @@ function lexer(){
 		function main(){
 	      	for ( i = 0; i < palabras.length; i++) {
 	      		 resultado.push(palabras[i]+": "+estado_0()+"<br>");
-	      			console.log();
+	      			console.log("yiiiiiii");
 	      		contador=0;
 	      	}
 	      	document.getElementById("imprimir").innerHTML= resultado.slice(0,resultado.length);
