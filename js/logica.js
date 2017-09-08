@@ -18,7 +18,7 @@ function lexer(){
 	 var i=0;
 	 var cadena=document.getElementById("valor").value;;
 	 var separador = " "; // un espacio en blanco
-	 var palabras = cadena.split(separador);
+	 var palabras = cadena.match(/[^\s]+/g);
 
 
 		function estado_0(){
