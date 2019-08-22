@@ -1,4 +1,4 @@
-# ***Teoría de autómatas***
+# ***Teoría de autómatas*** [Demo](https://dairocantillo.github.io/automata/)
 
 ## ¿Que es un autómata?
 *según [Coding or not](https://codingornot.com/que-es-un-automata) Un autómata es un modelo matemático para una máquina de estado finito, en el que dada una entrada de símbolos, “salta” mediante una serie de estados de acuerdo a una función de transición (que puede ser expresada como una tabla). Esta función de transición indica a qué estado cambiar dados el estado actual y el símbolo leído.*
