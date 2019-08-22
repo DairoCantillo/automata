@@ -8,4 +8,4 @@
 *Cuando hablamos de **expresiones regulares**, nos referimos (en términos muy generales) a **patrones** de coincidencia. **Patrones** que pueden usarse para **comparar, extraer, remplazar o dividir** segmentos de un texto particular, en otra _cadena, texto largo o documento._*
 
 ## ¿Que hay aquí?
-*Hay una aplicación básica de teoría de de autómatas para la implementan de de expresiones regulares presentado en una pagina web.*
+*Hay una aplicación básica de teoría de autómatas para la implementanción de expresiones regulares, corriendo en una pagina web.*
